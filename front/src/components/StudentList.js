@@ -5,6 +5,10 @@ import { Link } from 'react-router-dom';
 const StudentList = () => {
   const [students, setStudents] = useState([]);
 
+  /**
+   * useEffect hook to fetch the list of students from the backend
+   * when the component is mounted.
+   */
   useEffect(() => {
     axios.get('http://localhost:8080/getStudents')
       .then(response => {

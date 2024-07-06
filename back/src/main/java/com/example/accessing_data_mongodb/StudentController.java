@@ -1,6 +1,5 @@
 package com.example.accessing_data_mongodb;
 
-import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +10,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.http.ResponseEntity;
 
+/**
+ * A REST controller handling HTTP requests related to students, including endpoints for retrieving all students and adding new students.
+ */
 @CrossOrigin(origins = "*")
 @RestController
 public class StudentController {
@@ -18,11 +20,22 @@ public class StudentController {
     @Autowired
     StudentService studentService;
 
+    /**
+     * Endpoint to retrieve all students.
+     *
+     * @return a list of all students
+     */
     @GetMapping("/getStudents")
     public List<Student> getStudents() {
         return studentService.getAllStudents();
     }
 
+    /**
+     * Endpoint to create a new student.
+     *
+     * @param student the student object to be created
+     * @return a response entity with the result of the operation
+     */
     @PostMapping("/newStudents")
     public ResponseEntity<String> newStudents(@RequestBody Student student) {
         try {

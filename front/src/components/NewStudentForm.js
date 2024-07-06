@@ -11,6 +11,11 @@ const NewStudentForm = () => {
     birthdate: ''
   });
 
+  /**
+   * Handles changes to the input fields and updates the formData state.
+   *
+   * @param {Object} e - The event object.
+   */
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prevState => ({
@@ -19,6 +24,11 @@ const NewStudentForm = () => {
     }));
   };
 
+  /**
+   * Handles form submission, sends the form data to the server, and processes the response.
+   *
+   * @param {Object} e - The event object.
+   */
   const handleSubmit = (e) => {
     e.preventDefault();
     

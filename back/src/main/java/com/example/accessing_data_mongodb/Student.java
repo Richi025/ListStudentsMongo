@@ -5,6 +5,9 @@ import java.time.LocalDate;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+
+/**
+ * Represents a student object with fields such as first name, last name, program, email, and birthdate, mapped to MongoDB database.*/
 @Document("Student")
 public class Student {
 
@@ -17,6 +20,15 @@ public class Student {
   public LocalDate birthdate;
 
 
+  /**
+   * Constructor for creating a Student object with the given parameters.
+   *
+   * @param firstName the first name of the student
+   * @param lastName the last name of the student
+   * @param program the program the student is enrolled in
+   * @param mail the email address of the student
+   * @param birthdate the birthdate of the student
+   */
   public Student(String firstName, String lastName, String program, String mail, LocalDate birthdate) {
     super();
     this.firstName = firstName;
@@ -26,6 +38,11 @@ public class Student {
     this.birthdate = birthdate;
   }
 
+  /**
+   * Returns a string representation of the Student object.
+   *
+   * @return a formatted string containing the student's details
+   */
   @Override
   public String toString() {
     return String.format(
