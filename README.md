@@ -95,7 +95,7 @@ Once you have the cloned project in your repository. Follow the steps below to l
     npm start
     ```
 
-4. Now there will be a browser and enter the following link and you can start drawing.
+4. Now there will be a browser and enter the following link and you can start.
 
     http://localhost:3000/ 
 
